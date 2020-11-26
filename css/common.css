@@ -189,8 +189,8 @@ body {
     font-size: 2.5em;
 }
 
-.login-card {
-    background-color: #f7f7f7;
+.login-card , .signup-card , .password-card{
+    background-color: rgba(247, 247, 247);
 }
 
 .form-group input {

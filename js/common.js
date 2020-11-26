@@ -16,7 +16,7 @@ function custom_alert(type, message) {
            <span aria-hidden="true">&times;</span>
         </button>
         </div>`);
-    } else if (type === 'warning') {
+    } else if (type === 'warning'){
         newAlert.html(`
         <div class="fade-in text-center m-0 alert alert-${type} alert-dismissible fade show" role="alert">
             <i class="fa fa-exclamation-circle alert-warning" aria-hidden="true"></i> ${message}
