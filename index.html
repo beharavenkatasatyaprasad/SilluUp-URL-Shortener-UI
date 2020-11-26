@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div id="alert"></div>
+    <div id="message"></div>
     <nav class="navbar shadow navbar-expand-md m-0 px-2 py-1" style="background-color:#002553;">
         <a class="navbar-brand" href="index.html"><img src="imgs/logo2.png" height="40" alt=""></a>
         <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse"
@@ -50,9 +50,9 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                         <h1>SillyFy</h1>
                         <p>Get URLs Sillified</p>
-                        <div id="orig" class="url_area">
-                            <input id="link" type="text" placeholder="Paste long url and SillyFy it">
-                            <button class="button sillify_b" onclick="send()">SillyFy</button>
+                        <div id="orig" class="url_area input-container input-group d-flex justify-content-center" style="margin: auto;">
+                            <input type="text" id="longlink" class="form-control form-control-md col-sm-12 col-lg-8" placeholder="Paste long url and SillyFy it">
+                            <button class="input-group-append search-btn btn btn-primary mb-2"  onclick="send()">SillyFy</button>
                         </div>
                     </div>
                 </div>
@@ -60,6 +60,7 @@
             </div>
             <div id="particles-js" height="100"></div>
         </section>
+        <hr style="height:1px; border-width:0; color:gray; background-color:gray; padding: 0px; margin: 0px;">
         <div class="result-div">
             <div class="card p-3">
                 <div class="row">
@@ -86,6 +87,7 @@
         </div>
     </div>
     <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
     <script src="js/particles.min.js"></script>
     <script type="text/javascript" src="js/particles.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>

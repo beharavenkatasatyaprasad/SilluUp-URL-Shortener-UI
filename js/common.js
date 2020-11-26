@@ -24,7 +24,10 @@ function custom_alert(type, message) {
             <i class="fa fa-times-circle alert-danger" aria-hidden="true"></i> ${message}
         </div>`);
     }
+    
     setTimeout(() => {
         newAlert.html("");
     }, 3500);
+
 }
+
