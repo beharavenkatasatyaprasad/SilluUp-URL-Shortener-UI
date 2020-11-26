@@ -34,7 +34,7 @@
             <ul class="navbar-nav  text-center">
                 <li class="nav-item">
                     <button type="button" id="Login" onclick="redirectToLoginPage()"
-                      class="nav-buttons btn btn-md btn-block">Login</button>
+                      class="active nav-buttons btn btn-md btn-block">Login</button>
                   </li>
                   <li class="nav-item">
                     <button type="button" id="SignUp" onclick="redirectToSignUpPage()"
@@ -44,47 +44,29 @@
         </div>
     </nav>
     <hr style="height:1px; border-width:0; color:gray; background-color:gray; padding: 0px; margin: 0px;">
-    <div class="container-fluid m-0 p-0">
-        <section class="link-input-div">
-            <div class="container z-i1">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <h1>Silly Up</h1>
-                        <p>Get URLs Sillified</p>
-                        <div id="orig" class="url_area">
-                            <input id="link" type="text" placeholder="Paste long url and Sillify it" name="url" value="" onkeyup="restoreBtn()">
-                            <button class="button sillify_b" onclick="send()">Silly Up</button>
-                        </div>
-                    </div>
+    <div class="container-fluid login">
+        <section class="login-input-div input-div">
+            <h1 class="text-center cred-heading">Login</h1> 
+            <div class="card login-card col-lg-4 p-3 col-sm-10" style="margin: auto;">
+                <div class="form-inputs">
+                    <form id="Login-Form">
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="email">
+                            <small id="emailHelp" class="form-text text-muted text-right">(Email registered with SillyUp)</small>
+                          </div>
+                          <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                          </div>
+                          <div class="form-group">
+                              <button type="button" class="btn btn-block">Login</button>
+                          </div>
+                    </form>
                 </div>
-
             </div>
-            <div id="particles-js"></div>
         </section>
-        <div class="result-div">
-            <div class="card p-3">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="col-lg-1 col-md-12 p-0 m-0 date-created">
-                            <p>20-02-2020</p>
-                        </div>
-                        <div class="col col-lg-12 m-0 link-title">
-                            Google
-                        </div>
-                        <div class="col-lg-12 m-0 actual-link">
-                            www.google.com
-                        </div>
-                        <div class="row col-sm-12 col-lg-12 m-0 sillified-link">
-                            <div class="col-lg-4 p-0 align-middle">
-                                <a href="">www.silly.fy/4WeR2q</a>  
-                                <button type="button" class="btn btn-sm btn-outline-danger">Copy Link</button>
-                                <button type="button" class="btn btn-sm btn-outline-danger">Customize Url</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="particles-js" height="100"></div>
     </div>
     <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="js/Home.js"></script>
