@@ -180,9 +180,6 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
-.login-input-div{
-    padding-top: 8%;
-}
 
 .cred-heading{
     color: hsl(0, 0%, 100%);
