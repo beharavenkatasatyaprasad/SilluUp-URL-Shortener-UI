@@ -222,3 +222,7 @@ body {
     outline: none;
     border-radius: 4px;
 }
+
+.new-pwd-input-div ,.signup-input-div{
+    padding-top: 2.5% !important;
+}

@@ -49,6 +49,7 @@ async function register(email,password){
         setTimeout(() => {
             btn.innerHTML = 'Sign Up'
             form.reset()
+            window.location.href = './login.html';
             btn.disabled = false
         }, 3500);
     }else{

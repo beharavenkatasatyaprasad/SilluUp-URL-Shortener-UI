@@ -1,19 +1,19 @@
 const loginbtn = document.getElementById('loginbtn');
 
 function login() {
-    loginbtn.innerHTML="loading..."
+    loginbtn.innerHTML = "loading..."
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     if (!email || !password) {
         custom_alert('warning', 'Please Fill all the Fields...')
-        loginbtn.innerHTML='Try again'
+        loginbtn.innerHTML = 'Try again'
     } else {
-        CheckCredentials(email,password)
+        CheckCredentials(email, password)
     }
 }
 
 
-async function CheckCredentials(email,password) {
+async function CheckCredentials(email, password) {
     let data = {
         email: email,
         password: password
@@ -26,13 +26,13 @@ async function CheckCredentials(email,password) {
         }
     });
     let res = await response.json()
-    custom_alert(res.type_,res.message);
+    custom_alert(res.type_, res.message);
     if (res.type_ == 'success') {
-        loginbtn.innerHTML='login successful'
+        loginbtn.innerHTML = 'login successful'
         window.localStorage.setItem("user_token", res.token);
         window.location.href = './home.html';
         form.reset()
-    }else{
-        loginbtn.innerHTML='login'
+    } else {
+        loginbtn.innerHTML = 'login'
     }
 }
