@@ -26,35 +26,35 @@ particlesJS("particles-js", {
             }
         },
         "opacity": {
-            "value": 0.6,
+            "value": 0.4,
             "random": false,
             "anim": {
                 "enable": false,
-                "speed": 1,
+                "speed": 0.3,
                 "opacity_min": 0.1,
                 "sync": false
             }
         },
         "size": {
-            "value": 6,
+            "value": 9,
             "random": true,
             "anim": {
                 "enable": false,
-                "speed": 40,
+                "speed": 0.4,
                 "size_min": 0.1,
                 "sync": false
             }
         },
         "line_linked": {
             "enable": true,
-            "distance": 150,
+            "distance": 110,
             "color": "#fff",
-            "opacity": 0.6,
+            "opacity": 0.4,
             "width": 1
         },
         "move": {
             "enable": true,
-            "speed": 3,
+            "speed": 1.5,
             "direction": "none",
             "random": false,
             "straight": false,
@@ -108,20 +108,3 @@ particlesJS("particles-js", {
     },
     "retina_detect": true
 });
-var count_particles, stats, update;
-stats = new Stats;
-stats.setMode(0);
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
-document.body.appendChild(stats.domElement);
-count_particles = document.querySelector('.js-count-particles');
-update = function () {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-        count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-};
-requestAnimationFrame(update);;
