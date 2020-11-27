@@ -13,11 +13,11 @@ function resetpassword() {
         custom_alert('warning', "'Confirm Password' field must match 'Password' field ...")
         btn.innerHTML = 'Reset Password'
     } else {
-        UpdatePassword(email,password)
+        UpdatePassword(email, password)
     }
 }
 
-async function UpdatePassword(email,password) {
+async function UpdatePassword(email, password) {
     let data = {
         email: email,
         password: password
@@ -36,7 +36,7 @@ async function UpdatePassword(email,password) {
         btn.style.backgroundColor = 'green'
         btn.disabled = true
         setTimeout(() => {
-            window.location.href = './login.html';
+            window.location.href = './index.html';
         }, 3500);
     } else {
         btn.innerHTML = 'Reset My Password'

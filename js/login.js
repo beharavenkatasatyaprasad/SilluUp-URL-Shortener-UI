@@ -27,11 +27,14 @@ async function CheckCredentials(email, password) {
     });
     let res = await response.json()
     custom_alert(res.type_, res.message);
+    console.log(res)
     if (res.type_ == 'success') {
         loginbtn.innerHTML = 'login successful'
-        window.localStorage.setItem("user_token", res.token);
-        window.location.href = './home.html';
-        form.reset()
+        window.localStorage.setItem("user", res.user);
+        window.localStorage.setItem("token", res.token);
+        setTimeout(() => {
+            window.location.href = 'user/home.html';
+        }, 1000);
     } else {
         loginbtn.innerHTML = 'login'
     }

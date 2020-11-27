@@ -1,17 +1,17 @@
-const token = window.localStorage.getItem("token");
 const username = window.localStorage.getItem("user");
+const token = window.localStorage.getItem("token");
 
-// let username = document.getElementById('username').innerHTML = username.split('@')[0]
 
-document.getElementById('Sillyfy').addEventListener('click',()=>{
+
+document.getElementById('Sillyfy').addEventListener('click', () => {
     window.location.href = "./home.html";
 });
 
-document.getElementById('myLinks').addEventListener('click',()=>{
+document.getElementById('myLinks').addEventListener('click', () => {
     window.location.href = "./myLinks.html";
 });
 
-document.getElementById('LogOut').addEventListener('click',()=>{
+document.getElementById('LogOut').addEventListener('click', () => {
     window.localStorage.removeItem("user");
     window.localStorage.removeItem("token");
     custom_alert("warning", "logging out!");
@@ -22,17 +22,17 @@ login()
 
 
 
-// function login() {
-//     if (!token || !username) {
-//       custom_alert("warning", "UnAuthorized Login!!!");
-//       setTimeout(() => {
-//         window.location.href = "../index.html";
-//       }, 2000);
-//     } else {
-//       custom_alert("success", "Login Successful!");
-//     }
-// }
-  
+function login() {
+    if (!token || !username) {
+        custom_alert("warning", "UnAuthorized Login!!!");
+        setTimeout(() => {
+            window.location.href = "../index.html";
+        }, 2000);
+    } else {
+        document.getElementById('username').innerHTML = username.split('@')[0]
+    }
+}
+
 
 function custom_alert(type, message) {
     let newAlert = $("#message");
@@ -41,7 +41,7 @@ function custom_alert(type, message) {
         <div class="fade-in text-center m-0 alert alert-${type} fade show" role="alert">
             <i class="fa fa-check-circle alert-success" aria-hidden="true"></i> ${message}
         </div>`);
-    } else if (type === 'warning'){
+    } else if (type === 'warning') {
         newAlert.html(`
         <div class="fade-in text-center m-0 alert alert-${type} fade show" role="alert">
             <i class="fa fa-exclamation-circle alert-warning" aria-hidden="true"></i> ${message}
@@ -52,7 +52,7 @@ function custom_alert(type, message) {
             <i class="fa fa-times-circle alert-danger" aria-hidden="true"></i> ${message}
         </div>`);
     }
-    
+
     setTimeout(() => {
         newAlert.html("");
     }, 4000);

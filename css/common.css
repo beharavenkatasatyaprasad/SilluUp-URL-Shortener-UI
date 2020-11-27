@@ -227,5 +227,43 @@ body {
 }
 
 .short-link {
-    background-color: palegreen;
+    background-color: #3b589800 !important;
+}
+
+.links-card a {
+    color: hsl(0, 0%, 100%);
+}
+
+.my-links-btns button {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid transparent !important;
+    border-radius: 0px;
+    height: 50px;
+    transition: all 0.5s ease;
+}
+
+.my-links-btns button:hover {
+    letter-spacing: 1.8px;
+    background-color: hsla(0, 0%, 100%, 0.2);
+    color: rgb(0, 0, 0);
+    height: 50px;
+}
+
+.links-card {
+    background-color: hsla(213, 100%, 16%, 0.884);
+    border: 1px solid rgba(128, 128, 128, 0.63) !important;
+    transition: all 0.5s ease;
+}
+
+.links-card:hover {
+    background-color: hsl(213, 100%, 16%);
+    border: 1px solid rgba(128, 128, 128, 0.63) !important;
+}
+
+.description {
+    font-variant: small-caps;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: yellow !important;
 }

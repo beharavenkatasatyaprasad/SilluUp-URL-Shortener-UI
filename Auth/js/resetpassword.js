@@ -25,9 +25,9 @@ async function sendVerification(email) {
     });
     let res = await response.json()
     custom_alert(res.type_, res.message);
-    if(res.type_ == 'success'){
+    if (res.type_ == 'success') {
         resetbtn.innerHTML = 'Check your Inbox..'
-    }else{
+    } else {
         resetbtn.innerHTML = 'Send Reset Link'
     }
 }
