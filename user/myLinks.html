@@ -26,6 +26,9 @@
     <div id="message"></div>
     <nav class="navbar shadow navbar-expand-md m-0 px-2 py-1" style="background-color:#002553;">
         <a class="navbar-brand" href="../index.html"><img src="../imgs/logo2.png" height="40" alt=""></a>
+        <div class="welcome">
+            <p class="m-2" style="color: White;">Welcome <span id="username">Satya Prasad Behara</span></p>
+        </div>
         <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <i class="fa fa-bars"></i>
         </button>
@@ -44,56 +47,16 @@
         </div>
     </nav>
     <hr style="height:1px; border-width:0; color:gray; background-color:gray; padding: 0px; margin: 0px;">
-    <div class="container-fluid p-0 m-0">
-        <section class="dashboard-input-div row justify-content-around cols-sm-12 col-lg-12 input-div" style="margin: auto;">
-            <div class="card links-card col col-sm-10 col-md-10 m-2 col-xs-12 p-0 col-lg-6">
-                <div class="short-link row p-2 m-0 text-center">
-                    <div class="col-lg-5  col-sm-12">
-                        <span class="description">
-                            Shortified Url
-                        </span>
-                        <a href="https://www.xyz.com/iwywi">https://www.xyz.com/iwywi</a>
-                    </div>
-                    <div class="col-lg-2 col-sm-12">
-                        <span class="description">
-                            Clicks
-                        </span>
-                        <span style="color: rgb(255, 255, 255);">
-                            0
-                        </span>
-                    </div>
-                    <div class="col-lg-5 col-sm-12">
-                        <span class="description">
-                            ShortyFyed On 
-                        </span> <br>
-                        <span style="color: rgb(255, 255, 255);">
-                            20/10/2020
-                        </span>
-                    </div>
-                </div>
-                <div class="long-link p-0 col">
-                    <div class="description col-sm-12">
-                        long Url :
-                    </div>
-                    <div class="col-sm-12 px-4 text-center">
-                        <a href="https://www.xyz.com/iwywi"><small>https://github.com/beharavenkatasatyaprasad/Mentor-Assignment-Webapp/blob/master/js/assignMentor.js</small></a>
-                    </div>
-                </div>
-                <div class="col btns col-sm-12 p-0">
-                    <div class="my-links-btns row m-0">
-                        <div class="col-sm-6 p-0">
-                            <button type="button" class="btn btn-block">Copy Long Url &nbsp; <i class="fa fa-clone" aria-hidden="true"></i></button>
-                        </div>
-                        <div class="col-sm-6 p-0">
-                            <button type="button" class="btn btn-block">Copy Short Url &nbsp; <i class="fa fa-clone" aria-hidden="true"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div id="particles-js" height='100'></div>
+
+    <div class="container-fluid p-0">
+        <div id="result_" class="result col-lg-10 col-sm-12 row justify-content-around" style="margin: auto; margin-top: 2%;">
+
+        </div>
     </div>
+
+    <div id="particles-js" height='100'></div>
     <script type="text/javascript" src="./js/common.js"></script>>
+    <script type="text/javascript" src="./js/mylinks.js"></script>>
     <script type="text/javascript" src="../js/particlejs/particles.min.js"></script>
     <script src="../js/particlejs/particles.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

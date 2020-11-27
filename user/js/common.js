@@ -1,8 +1,6 @@
 const username = window.localStorage.getItem("user");
 const token = window.localStorage.getItem("token");
 
-
-
 document.getElementById('Sillyfy').addEventListener('click', () => {
     window.location.href = "./home.html";
 });
@@ -29,7 +27,8 @@ function login() {
             window.location.href = "../index.html";
         }, 2000);
     } else {
-        document.getElementById('username').innerHTML = username.split('@')[0]
+        let user = document.getElementById('username');
+        user.innerHTML = username.split('@')[0]
     }
 }
 

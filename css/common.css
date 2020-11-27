@@ -253,6 +253,7 @@ body {
 .links-card {
     background-color: hsla(213, 100%, 16%, 0.884);
     border: 1px solid rgba(128, 128, 128, 0.63) !important;
+    margin: 1%;
     transition: all 0.5s ease;
 }
 
