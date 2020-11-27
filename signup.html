@@ -15,16 +15,15 @@
     <!-- google font  -->
     <!-- css  -->
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/login_signup.css">
     <!-- css  -->
     <!-- font-awesome  -->
     <script src="https://use.fontawesome.com/d8a40b24d8.js"></script>
     <!-- font-awesome  -->
-    <title>SillyFy | Login</title>
+    <title>SillyFy | SignUp</title>
 </head>
 
 <body>
-    <div id="message" class="col-sm-12 p-0"></div>
+    <div id="message"></div>
     <nav class="navbar shadow navbar-expand-md m-0 px-2 py-1" style="background-color:#002553;">
         <a class="navbar-brand" href="index.html"><img src="imgs/logo2.png" height="40" alt=""></a>
         <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse"
@@ -66,7 +65,8 @@
                                 <input type="password" class="form-control" id="confirmpassword" required>
                             </div>
                             <div class="form-group">
-                                <button type="button" id="signupbtn" onclick="signup()" class="btn btn-block">Sign Up</button>
+                                <button type="button" id="signupbtn" onclick="signup()" class="btn btn-block">Sign
+                                    Up</button>
                             </div>
                         </form>
                     </div>
@@ -76,7 +76,7 @@
                         <p>
                             <small>
                                 Forgot your Password?<br>
-                                <a href="resetpassword.html">Reset Password</a>
+                                <a href="Auth/resetpassword.html">Reset Password</a>
                             </small>
                         </p>
                     </div>
@@ -84,7 +84,7 @@
                         <p>
                             <small>
                                 Already had an Account?<br>
-                                <a href="login.html">Login</a>
+                                <a href="./index.html">Login</a>
                             </small>
                         </p>
                     </div>
@@ -93,10 +93,11 @@
         </section>
         <div id="particles-js" height='100'></div>
     </div>
+    <script type="text/javascript" src="js/alert.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="js/signup.js"></script>
-    <script src="js/particles.min.js"></script>
-    <script type="text/javascript" src="js/particles.js"></script>
+    <script src="js/particlejs/particles.min.js"></script>
+    <script type="text/javascript" src="js/particlejs/particles.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -33,7 +33,7 @@ async function register(email,password){
         email: email,
         password: password
     }
-    let response = await fetch('https://sillyfy.herokuapp.com/register', {
+    let response = await fetch('http://localhost:3000/register', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {

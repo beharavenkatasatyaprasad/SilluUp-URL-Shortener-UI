@@ -18,7 +18,7 @@ async function CheckCredentials(email, password) {
         email: email,
         password: password
     }
-    let response = await fetch('https://sillyfy.herokuapp.com/login', {
+    let response = await fetch('http://localhost:3000/login', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
