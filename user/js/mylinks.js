@@ -31,15 +31,17 @@ function displayResult(data) {
                     <span class="description">
                         SillyFyed Url
                     </span><br>
-                    <a href="https://sillyfy.herokuapp.com/fy/${link.shortLink}">
-                        sillyfy.herokuapp.com/fy/${link.shortLink}                
-                    </a>
+                    <small>
+                        <a href="https://sillyfy.herokuapp.com/fy/${link.shortLink}">
+                            sillyfy.herokuapp.com/fy/${link.shortLink}                
+                        </a>
+                    </small>
                 </div>
                 <div class="col-lg-6 col-sm-12">
                     <span class="description">
                         SillyFyed On 
                     </span><br>
-                    <span style="color: rgb(255, 255, 255);">
+                    <span style="color:hsl(182, 25%, 50%);">
                         <small>${link.issuedOn}</small>
                     </span>
                 </div>

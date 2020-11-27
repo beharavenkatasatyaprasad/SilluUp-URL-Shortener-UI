@@ -231,12 +231,12 @@ body {
 }
 
 .links-card a {
-    color: hsl(0, 0%, 100%);
+    color: hsl(300, 24%, 80%);
 }
 
 .my-links-btns button {
     background-color: transparent;
-    color: rgb(255, 255, 255);
+    color: hsl(300, 24%, 80%);
     border: 1px solid transparent !important;
     border-radius: 0px;
     height: 50px;
