@@ -32,11 +32,7 @@ function displayResult(data) {
                         SillyFyed Url
                     </span><br>
                     <a href="https://sillyfy.herokuapp.com/fy/${link.shortLink}">
-                        <span id="short">
-                            <small>
-                                 sillyfy.herokuapp.com/fy/${link.shortLink}
-                            </small>
-                         </span>
+                        sillyfy.herokuapp.com/fy/${link.shortLink}                
                     </a>
                 </div>
                 <div class="col-lg-6 col-sm-12">

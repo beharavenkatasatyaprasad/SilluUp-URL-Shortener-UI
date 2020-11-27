@@ -266,7 +266,7 @@ body {
     font-variant: small-caps;
     font-weight: 600;
     letter-spacing: 1px;
-    color: yellow !important;
+    color: hsl(182, 25%, 50%);
 }
 
 #myBtn {
