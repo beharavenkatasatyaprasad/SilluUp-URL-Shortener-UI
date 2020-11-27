@@ -41,7 +41,7 @@ function displayResult(data) {
                     <span class="description">
                         SillyFyed On 
                     </span><br>
-                    <span style="color:hsl(182, 25%, 50%);">
+                    <span style="color:hsl(300, 24%, 80%)">
                         <small>${link.issuedOn}</small>
                     </span>
                 </div>
