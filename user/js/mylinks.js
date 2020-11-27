@@ -33,7 +33,9 @@ function displayResult(data) {
                     </span><br>
                     <a href="https://sillyfy.herokuapp.com/fy/${link.shortLink}">
                         <span id="short">
-                             sillyfy.herokuapp.com/fy/${link.shortLink}
+                            <small>
+                                 sillyfy.herokuapp.com/fy/${link.shortLink}
+                            </small>
                          </span>
                     </a>
                 </div>
@@ -42,7 +44,7 @@ function displayResult(data) {
                         SillyFyed On 
                     </span><br>
                     <span style="color: rgb(255, 255, 255);">
-                        ${link.issuedOn}
+                        <small>${link.issuedOn}</small>
                     </span>
                 </div>
             </div>
