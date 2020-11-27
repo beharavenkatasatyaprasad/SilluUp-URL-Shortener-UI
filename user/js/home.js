@@ -70,7 +70,7 @@ function displayResult(res) {
                 <span class="description">
                     SillyFyed On 
                 </span><br>
-                <span style="color:hsl(182, 25%, 50%);">
+                <span style="hsl(182, 25%, 50%);">
                     ${res.date}
                 </span>
             </div>

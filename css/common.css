@@ -245,7 +245,7 @@ body {
 
 .my-links-btns button:hover {
     letter-spacing: 1.8px;
-    background-color: hsla(0, 0%, 100%, 0.2);
+    background-color: hsl(182, 25%, 50%);
     color: rgb(0, 0, 0);
     height: 50px;
 }
