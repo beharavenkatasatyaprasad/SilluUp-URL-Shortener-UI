@@ -54,6 +54,36 @@ function custom_alert(type, message) {
 
     setTimeout(() => {
         newAlert.html("");
-    }, 4000);
+    }, 3000);
 
+}
+
+const mybutton = document.getElementById("myBtn");
+window.onscroll = function() {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+function copy(text) {
+    var input = document.createElement('input');
+    input.setAttribute('value', text);
+    document.body.appendChild(input);
+    input.select();
+    var result = document.execCommand('copy');
+    document.body.removeChild(input);
+    if (result) {
+        custom_alert("success", "Copied To Clipboard..");
+    }
 }

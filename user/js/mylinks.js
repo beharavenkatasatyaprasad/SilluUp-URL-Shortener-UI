@@ -6,7 +6,7 @@ async function myLinks() {
     let data = {
         user: user
     }
-    let response = await fetch('http://localhost:3000/MyLinks', {
+    let response = await fetch('https://sillyfy.herokuapp.com/MyLinks', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -14,7 +14,6 @@ async function myLinks() {
         }
     });
     let res = await response.json()
-        // custom_alert(res.type_, res.message);    
     displayResult(res)
 
 }
@@ -25,14 +24,18 @@ function displayResult(data) {
     result_div.innerHTML = ''
     dataArray.forEach(link => {
         const card = document.createElement('div');
-        card.className = 'card fade-in links-card col-lg-6'
+        card.className = 'card fade-in p-0 links-card col-lg-6'
         card.innerHTML = (`
             <div class="short-link row p-2 m-0 text-center">
                 <div class="col-lg-6  col-sm-12">
                     <span class="description">
                         SillyFyed Url
                     </span><br>
-                    <a href="http://localhost:3000/fy/${link.shortLink}">http://localhost:3000/fy/${link.shortLink}</a>
+                    <a href="https://sillyfy.herokuapp.com/fy/${link.shortLink}">
+                        <span id="short">
+                             sillyfy.herokuapp.com/fy/${link.shortLink}
+                         </span>
+                    </a>
                 </div>
                 <div class="col-lg-6 col-sm-12">
                     <span class="description">
@@ -48,16 +51,16 @@ function displayResult(data) {
                     long Url
                 </div>
                 <div class="col-sm-12 px-0 text-center">
-                    <a href="${link.longLink}"><small>${link.longLink}</small></a>
+                    <a href="${link.longLink}"><small id="long">${link.longLink}</small></a>
                 </div>
             </div>
             <div class="col btns col-sm-12 p-0">
                 <div class="my-links-btns row m-0">
                     <div class="col-sm-6 p-0">
-                        <button type="button" class="btn btn-block">Copy Long Url &nbsp; <i class="fa fa-clone" aria-hidden="true"></i></button>
+                        <button type="button" onclick="copy('${link.longLink}')"  class="btn btn-block">Copy Long Url &nbsp; <i class="fa fa-copy" aria-hidden="true"></i></button>
                     </div>
                     <div class="col-sm-6 p-0">
-                        <button type="button" class="btn btn-block">Copy SillyFyed Url &nbsp; <i class="fa fa-clone" aria-hidden="true"></i></button>
+                        <button type="button"  onclick="copy('sillyfy.herokuapp.com/fy/${link.shortLink}')" class="btn btn-block">Copy SillyFyed Url &nbsp; <i class="fa fa-copy" aria-hidden="true"></i></button>
                     </div>
                 </div>
             </div>

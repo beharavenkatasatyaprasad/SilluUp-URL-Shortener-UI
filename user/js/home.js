@@ -35,7 +35,7 @@ async function sillyFy(longLink) {
         req_by: user,
         longLink: longLink,
     }
-    let response = await fetch('http://localhost:3000/sillyFy', {
+    let response = await fetch('https://sillyfy.herokuapp.com/sillyFy', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -84,10 +84,10 @@ function displayResult(res) {
         <div class="col btns col-sm-12 p-0">
             <div class="my-links-btns row m-0">
                 <div class="col-sm-6 p-0">
-                    <button type="button" class="btn btn-block">Copy Long Url &nbsp; <i class="fa fa-clone" aria-hidden="true"></i></button>
+                    <button type="button" onclick="copy('${res.longLink}')" class="btn btn-block">Copy Long Url &nbsp; <i class="fa fa-clone" aria-hidden="true"></i></button>
                 </div>
                 <div class="col-sm-6 p-0">
-                    <button type="button" class="btn btn-block">Copy SillyFyed Url &nbsp; <i class="fa fa-clone" aria-hidden="true"></i></button>
+                    <button type="button" onclick="copy('${res.shortLink}')" class="btn btn-block">Copy SillyFyed Url &nbsp; <i class="fa fa-clone" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>

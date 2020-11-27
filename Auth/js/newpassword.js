@@ -22,7 +22,7 @@ async function UpdatePassword(email, password) {
         email: email,
         password: password
     }
-    let response = await fetch('http://localhost:3000/newpassword', {
+    let response = await fetch('https://sillyfy.herokuapp.com/newpassword', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {

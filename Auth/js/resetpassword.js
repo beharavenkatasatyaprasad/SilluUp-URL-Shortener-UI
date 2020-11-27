@@ -16,7 +16,7 @@ async function sendVerification(email) {
     let data = {
         email: email
     }
-    let response = await fetch('http://localhost:3000/resetpassword', {
+    let response = await fetch('https://sillyfy.herokuapp.com/resetpassword', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
