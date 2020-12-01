@@ -20,5 +20,5 @@ async function getusers() {
         }
     });
     let res = await response.json()
-    document.getElementById('users').innerHTML = res.length
+    document.getElementById('users').innerHTML = res.length - 1
 }
