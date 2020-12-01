@@ -1,6 +1,7 @@
 const user = window.localStorage.getItem('user');
 document.getElementById('username').innerHTML = user.split('@')[0]
 const result_div = document.getElementById('result_');
+const sendbtn = document.getElementById('sendbtn');
 
 function send() {
     const Longlink = document.getElementById('Longlink').value;
@@ -29,7 +30,9 @@ function validURL(longUrl) {
 
 
 async function sillyFy(longLink) {
-    console.log(longLink)
+    // console.log(longLink)
+    sendbtn.innerHTML = 'Wait..'
+    sendbtn.disabled = true
     let data = {
         req_by: user,
         longLink: longLink,
@@ -44,7 +47,8 @@ async function sillyFy(longLink) {
     let res = await response.json()
     custom_alert(res.type_, res.message);
     if (res.type_ == 'success') {
-        // console.log(res);
+        sendbtn.innerHTML = 'SillyFy'
+        sendbtn.disabled = false
         displayResult(res)
     }
 }
