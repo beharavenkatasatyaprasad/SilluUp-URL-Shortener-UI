@@ -2,7 +2,7 @@
     <img src="imgs/logo2.png" alt=""  align="right" height="60">
 </a>
 
-# [SillyFy-URL-Shortener](https://sillyfy.netlify.app/)
+# [SillyFy-URL-Shortener-UI](https://sillyfy.netlify.app/)
 
 *A URL Shortening Web Application integrated by [SillyFy-URL-Shortener-API](https://github.com/beharavenkatasatyaprasad/SillyFy-URL-Shortener-Server).*
 
