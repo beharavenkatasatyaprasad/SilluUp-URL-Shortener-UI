@@ -12,7 +12,6 @@ document.getElementById('myLinks').addEventListener('click', () => {
 
 document.getElementById('LogOut').addEventListener('click', () => {
     logout()
-    window.localStorage.removeItem("user");
 });
 
 checklogin();
@@ -46,6 +45,7 @@ async function logout() {
     const res = await response.json()
     custom_alert(res.type_,res.message);
     setTimeout(() => {
+        window.localStorage.removeItem("user");
         window.location.href = "../index.html"
     }, 3000);
 }
