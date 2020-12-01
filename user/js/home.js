@@ -1,5 +1,5 @@
 const user = window.localStorage.getItem('user');
-document.getElementById('username').innerHTML = user.split('@')[0]
+
 const result_div = document.getElementById('result_');
 const sendbtn = document.getElementById('sendbtn');
 
