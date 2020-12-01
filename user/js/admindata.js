@@ -1,7 +1,6 @@
-document.body.addEventListener("load", ()=>{
-    getlinks()
-    getusers()
-});
+
+getlinks()
+getusers()
 
 async function getlinks() {
     let response = await fetch('https://sillyfy.herokuapp.com/getlinks', {
@@ -14,7 +13,6 @@ async function getlinks() {
     document.getElementById('links').innerHTML = res.length
 }
 
-
 async function getusers() {
     let response = await fetch('https://sillyfy.herokuapp.com/getusers', {
         method: 'GET',
@@ -23,5 +21,5 @@ async function getusers() {
         }
     });
     let res = await response.json()
-    document.getElementById('users').innerHTML = res.length - 1
+    document.getElementById('users').innerHTML = res.length -1
 }
