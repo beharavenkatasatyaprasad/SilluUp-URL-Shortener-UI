@@ -10,6 +10,7 @@ document.getElementById('myLinks').addEventListener('click', () => {
 
 document.getElementById('LogOut').addEventListener('click', () => {
     logout()
+    window.localStorage.removeItem("user");
 });
 
 checklogin();
