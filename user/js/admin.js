@@ -1,7 +1,3 @@
-const username = window.localStorage.getItem("user");
-
-document.getElementById('username').innerHTML = username.split('@')[0]
-
 document.getElementById('dashboard').addEventListener('click', () => {
     window.location.href = "./home.html";
 });
@@ -27,6 +23,9 @@ async function checklogin() {
         setTimeout(() => {
             window.location.href = "../admin.html"
         }, 3000);
+    }else{
+        const username = window.localStorage.getItem("user");
+        document.getElementById('username').innerHTML = username.split('@')[0]
     }
 }
 

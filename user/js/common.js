@@ -1,6 +1,3 @@
-const username = window.localStorage.getItem("user");
-
-document.getElementById('username').innerHTML = username.split('@')[0]
 
 document.getElementById('Sillyfy').addEventListener('click', () => {
     window.location.href = "./home.html";
@@ -30,6 +27,9 @@ async function checklogin() {
         setTimeout(() => {
             window.location.href = "../index.html"
         }, 3000);
+    }else{
+        const username = window.localStorage.getItem("user");
+        document.getElementById('username').innerHTML = username.split('@')[0]
     }
 }
 
@@ -72,7 +72,6 @@ function custom_alert(type, message) {
     setTimeout(() => {
         newAlert.html("");
     }, 3000);
-
 }
 
 const mybutton = document.getElementById("myBtn");
