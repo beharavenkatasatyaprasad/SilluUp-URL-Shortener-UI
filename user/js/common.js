@@ -1,5 +1,6 @@
 const username = window.localStorage.getItem("user");
 
+document.getElementById('username').innerHTML = username.split('@')[0]
 
 document.getElementById('Sillyfy').addEventListener('click', () => {
     window.location.href = "./home.html";
