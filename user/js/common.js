@@ -23,10 +23,10 @@ async function checklogin() {
     });
     const res = await response.json()
     if (res.type_ != 'success') {
-        custom_alert(res.type_ , res.message);
+        custom_alert('danger' , 'Unauthorized Login..');
         setTimeout(() => {
             window.location.href = "../index.html"
-        }, 3000);
+        }, 800);
     }else{
         const username = window.localStorage.getItem("user");
         document.getElementById('username').innerHTML = username.split('@')[0]

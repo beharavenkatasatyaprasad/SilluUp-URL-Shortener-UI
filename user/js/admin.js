@@ -22,7 +22,7 @@ async function checklogin() {
         custom_alert('danger' , 'Unauthorized Login..');
         setTimeout(() => {
             window.location.href = "../admin.html"
-        }, 1000);
+        }, 800);
     }else{
         const username = window.localStorage.getItem("user");
         document.getElementById('username').innerHTML = username.split('@')[0]
