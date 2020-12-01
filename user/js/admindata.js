@@ -8,13 +8,11 @@ async function getlinks() {
         }
     });
     let res = await response.json()
-    console.log(res)
+    document.getElementById('links').innerHTML = res.length
 }
 
 getusers()
-
-getlinks()
-async function getData() {
+async function getusers() {
     let response = await fetch('https://sillyfy.herokuapp.com/getusers', {
         method: 'GET',
         headers: {
@@ -22,5 +20,5 @@ async function getData() {
         }
     });
     let res = await response.json()
-    console.log(res)
+    document.getElementById('users').innerHTML = res.length
 }
