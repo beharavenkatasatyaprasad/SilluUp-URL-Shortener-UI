@@ -1,5 +1,4 @@
 const username = window.localStorage.getItem("user");
-const token = window.localStorage.getItem("token");
 
 document.getElementById('Sillyfy').addEventListener('click', () => {
     window.location.href = "./home.html";
@@ -10,28 +9,43 @@ document.getElementById('myLinks').addEventListener('click', () => {
 });
 
 document.getElementById('LogOut').addEventListener('click', () => {
-    window.localStorage.removeItem("user");
-    window.localStorage.removeItem("token");
-    custom_alert("warning", "logging out!");
-    setTimeout(() => (window.location.href = "../index.html"), 2000);
+    logout()
 });
 
-login()
+checklogin();
 
-
-
-function login() {
-    if (!token || !username) {
-        custom_alert("warning", "UnAuthorized Login!!!");
+async function checklogin() {
+    let response = await fetch('https://sillyfy.herokuapp.com/checklogin', {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const res = await response.json()
+    if (res.type_ != 'success') {
+        custom_alert(res.type_ , res.message);
         setTimeout(() => {
-            window.location.href = "../index.html";
-        }, 2000);
-    } else {
-        let user = document.getElementById('username');
-        user.innerHTML = username.split('@')[0]
+            window.location.href = "./index.html"
+        }, 3000);
     }
 }
 
+
+async function logout() {
+    let response = await fetch('https://sillyfy.herokuapp.com/logout', {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const res = await response.json()
+    custom_alert(res.type_,res.message);
+    setTimeout(() => {
+        window.location.href = "./index.html"
+    }, 3000);
+}
 
 function custom_alert(type, message) {
     let newAlert = $("#message");

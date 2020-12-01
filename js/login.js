@@ -20,6 +20,7 @@ async function CheckCredentials(email, password) {
     }
     let response = await fetch('https://sillyfy.herokuapp.com/login', {
         method: 'POST',
+        credentials: 'include',
         body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json'
@@ -31,7 +32,6 @@ async function CheckCredentials(email, password) {
     if (res.type_ == 'success') {
         loginbtn.innerHTML = 'login successful'
         window.localStorage.setItem("user", res.user);
-        window.localStorage.setItem("token", res.token);
         setTimeout(() => {
             window.location.href = 'user/home.html';
         }, 1000);

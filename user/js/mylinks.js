@@ -1,4 +1,5 @@
 const user = window.localStorage.getItem('user');
+document.getElementById('username').innerHTML = user.split('@')[0]
 const result_div = document.getElementById('result_');
 
 myLinks()
@@ -15,7 +16,6 @@ async function myLinks() {
     });
     let res = await response.json()
     displayResult(res)
-
 }
 
 function displayResult(data) {
