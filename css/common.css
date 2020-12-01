@@ -330,3 +330,9 @@ html {
     font-size: x-large;
     background-color:  rgba(0, 128, 128, 0.493);
 }
+
+@media (max-width: 575.98px) {
+    .cred-heading{
+        font-size: 1.5em;
+    }
+}
