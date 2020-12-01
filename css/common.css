@@ -240,7 +240,7 @@ body {
     border: 1px solid transparent !important;
     border-radius: 0px;
     height: 50px;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-out;
 }
 
 .my-links-btns button:hover {
@@ -254,7 +254,7 @@ body {
     background-color: hsla(213, 100%, 16%, 0.884);
     border: 1px solid rgba(128, 128, 128, 0.63) !important;
     margin: 1%;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-out;
 }
 
 .links-card:hover {
@@ -307,14 +307,14 @@ html {
 .data{
     font-family: "Kaushan Script";
     color: rgb(255, 255, 255);
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-out;
 }
 
 .data-container{
     background-color: rgba(0, 0, 0, 0.8);
     font-size: 670%;
     margin: 5%;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-out;
 }
 
 .data-container:hover {
