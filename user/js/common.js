@@ -26,7 +26,7 @@ async function checklogin() {
     if (res.type_ != 'success') {
         custom_alert(res.type_ , res.message);
         setTimeout(() => {
-            window.location.href = "./index.html"
+            window.location.href = "../index.html"
         }, 3000);
     }
 }
@@ -43,7 +43,7 @@ async function logout() {
     const res = await response.json()
     custom_alert(res.type_,res.message);
     setTimeout(() => {
-        window.location.href = "./index.html"
+        window.location.href = "../index.html"
     }, 3000);
 }
 
