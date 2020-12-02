@@ -36,7 +36,7 @@ async function UpdatePassword(email, password) {
         btn.style.backgroundColor = 'green'
         btn.disabled = true
         setTimeout(() => {
-            window.location.href = './index.html';
+            window.location.href = '../index.html';
         }, 3500);
     } else {
         btn.innerHTML = 'Reset My Password'
