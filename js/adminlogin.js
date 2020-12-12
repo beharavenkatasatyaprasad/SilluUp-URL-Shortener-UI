@@ -4,7 +4,7 @@ const AdminLoginForm =  document.getElementById('AdminLogin-Form');
 sendotpBtn.addEventListener('click',async ()=>{
     sendotpBtn.disabled = 'true';
     sendotpBtn.innerHTML = 'sending...'
-    let response = await fetch('https://sillyfy.herokuapp.com/admin_OTP_request', {
+    let response = await fetch('https://sillyfy.herokuapp.com/adminOTPrequest', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
