@@ -19,7 +19,7 @@ sendotpBtn.addEventListener('click',async ()=>{
         otpdiv.innerHTML = `
         <div class="form-group">
              <label for="password">OTP</label>
-             <input type="password" class="form-control" id="password" required>
+             <input type="password" class="form-control" id="password__" required>
         </div>
         <div class="form-group">
                 <button type="button" onclick="adminlogin()" class="btn btn-block">Login</button>
@@ -33,7 +33,7 @@ sendotpBtn.addEventListener('click',async ()=>{
 
 function adminlogin() {
     loginbtn.innerHTML = "loading..."
-    const password = document.getElementById('password').value;
+    const password = document.getElementById('password__').value;
     if (!password) {
         custom_alert('warning', 'Please Fill all the Fields...')
         loginbtn.innerHTML = 'Try again'
