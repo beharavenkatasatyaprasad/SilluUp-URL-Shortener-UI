@@ -36,20 +36,24 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav  text-center">
                 <li class="nav-item">
-                    <button type="button" id="Sillyfy" class="active nav-buttons btn btn-md btn-block">SillyFy</button>
+                    <button type="button" id="Sillyfy" class="active nav-buttons btn btn-md btn-block">
+                        SillyFy 
+                    </button>
                 </li>
                 <li class="nav-item">
-                    <button type="button" id="myLinks" class="nav-buttons btn btn-md btn-block">My Links</button>
+                    <button type="button" id="myLinks" class="nav-buttons btn btn-md btn-block">
+                        My Links
+                    </button>
                 </li>
                 <li class="nav-item">
-                    <button type="button" id="LogOut" class="nav-buttons btn btn-md btn-block">LogOut</button>
+                    <button type="button" id="LogOutbtn" class="nav-buttons btn btn-md btn-block">LogOut</button>
                 </li>
             </ul>
         </div>
     </nav>
     <div id="message"></div>
     <hr style="height:1px; border-width:0; color:gray; background-color:gray; padding: 0px; margin: 0px;">
-    <div class="container-fluid m-0 p-0">
+    <div id="homeDiv" class="container-fluid m-0 p-0 fade-in">
         <section class="link-input-div text-center">
             <div class="container z-i1">
                 <div class="row">
@@ -57,18 +61,22 @@
                         <h1>SillyFy</h1>
                         <p>Get URLs Sillified</p>
                         <div id="orig" class="url_area input-container input-group d-flex justify-content-center" style="margin: auto;">
-                            <input type="text" id="Longlink" class="form-control form-control-md col-sm-12 col-lg-8" placeholder="Paste long url and SillyFy it">
-                            <button type="button" id="sendbtn" class="input-group-append search-btn btn btn-primary mb-2" onclick="send()">SillyFy</button>
+                            <input type="text" id="Longlink" class="form-control form-control-lg col-sm-12 col-lg-8" placeholder="Paste long url and SillyFy it">
+                            <button type="button" id="sendbtn" class="input-group-append search-btn btn-lg btn-primary" onclick="send()">SillyFy</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <div id="particles-js" height="100"></div>
-        <div id="result_" class="container-fluid p-0 m-0"></div>
+        <div id="result__" class="container-fluid p-0 m-0"></div>
     </div>
+    <div id="mylinksDiv" class="container-fluid p-0">
+        <div id="result_" class="result col-lg-10 col-sm-12 row justify-content-around" style="margin: auto; margin-top: 2%;"></div>
+    </div>
+    <div id="particles-js" height="100"></div>
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="./js/home.js"></script>
+    <script type="text/javascript" src="./js/mylinks.js"></script>
     <script type="text/javascript" src="../js/particlejs/particles.min.js"></script>
     <script src="../js/particlejs/particles.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

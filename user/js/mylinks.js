@@ -1,5 +1,5 @@
-const user = window.localStorage.getItem('user');
-const result_div = document.getElementById('result_');
+// const user = window.localStorage.getItem('user');
+const resultdiv = document.getElementById('result_');
 
 
 myLinks()
@@ -20,7 +20,7 @@ async function myLinks() {
 
 function displayResult(data) {
     let dataArray = data.result
-    result_div.innerHTML = ''
+    resultdiv.innerHTML = ''
     dataArray.forEach(link => {
         const card = document.createElement('div');
         card.className = 'card fade-in p-0 links-card col-lg-6'
@@ -64,6 +64,6 @@ function displayResult(data) {
                 </div>
             </div>
         `)
-        result_div.appendChild(card)
+        resultdiv.appendChild(card)
     })
 }

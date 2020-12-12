@@ -1,37 +1,54 @@
 
-document.getElementById('Sillyfy').addEventListener('click', () => {
-    window.location.href = "./home.html";
+const homeDiv = document.getElementById('homeDiv');
+const mylinksDiv = document.getElementById('mylinksDiv');
+const Sillyfybtn = document.getElementById('Sillyfy');
+const myLinksbtn = document.getElementById('myLinks');
+const LogOutbtn = document.getElementById('LogOutbtn');
+mylinksDiv.style.display='none'
+
+
+Sillyfybtn.addEventListener('click', () => {
+    mylinksDiv.style.display='none'
+    myLinksbtn.classList.remove('active')
+    Sillyfybtn.classList.add('active')
+    homeDiv.style.display='block'
 });
 
-document.getElementById('myLinks').addEventListener('click', () => {
-    window.location.href = "./myLinks.html";
+myLinksbtn.addEventListener('click', () => {
+    homeDiv.style.display='none'
+    Sillyfybtn.classList.remove('active')
+    myLinksbtn.classList.add('active')
+    mylinksDiv.style.display='block'
 });
 
-document.getElementById('LogOut').addEventListener('click', () => {
+LogOutbtn.addEventListener('click', () => {
+    Sillyfybtn.classList.remove('active')
+    myLinksbtn.classList.remove('active')
+    LogOutbtn.classList.add('active')
     logout()
 });
 
-checklogin();
+// checklogin();
 
-async function checklogin() {
-    let response = await fetch('https://sillyfy.herokuapp.com/checklogin', {
-        method: 'GET',
-        credentials: 'include',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    });
-    const res = await response.json()
-    if (res.type_ != 'success') {
-        custom_alert('danger' , 'Unauthorized Login..');
-        setTimeout(() => {
-            window.location.href = "../index.html"
-        }, 800);
-    }else{
-        const username = window.localStorage.getItem("user");
-        document.getElementById('username').innerHTML = username.split('@')[0]
-    }
-}
+// async function checklogin() {
+//     let response = await fetch('https://sillyfy.herokuapp.com/checklogin', {
+//         method: 'GET',
+//         credentials: 'include',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         }
+//     });
+//     const res = await response.json()
+//     if (res.type_ != 'success') {
+//         custom_alert('danger' , 'Unauthorized Login..');
+//         setTimeout(() => {
+//             window.location.href = "../index.html"
+//         }, 800);
+//     }else{
+//         const username = window.localStorage.getItem("user");
+//         document.getElementById('username').innerHTML = username.split('@')[0]
+//     }
+// }
 
 
 async function logout() {

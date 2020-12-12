@@ -1,6 +1,6 @@
 const user = window.localStorage.getItem('user');
 
-const result_div = document.getElementById('result_');
+const result_div = document.getElementById('result__');
 const sendbtn = document.getElementById('sendbtn');
 
 function send() {
@@ -51,6 +51,7 @@ async function sillyFy(longLink) {
         sendbtn.disabled = false
         displayResult(res)
     }
+    myLinks()
 }
 
 function displayResult(res) {
