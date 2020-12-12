@@ -1,15 +1,20 @@
 
 const homeDiv = document.getElementById('homeDiv');
 const mylinksDiv = document.getElementById('mylinksDiv');
+const myprofileDiv = document.getElementById('myprofileDiv');
 const Sillyfybtn = document.getElementById('Sillyfy');
 const myLinksbtn = document.getElementById('myLinks');
+const myProfilebtn = document.getElementById('myProfile');
 const LogOutbtn = document.getElementById('LogOutbtn');
 mylinksDiv.style.display='none'
+myprofileDiv.style.display='none'
 
 
 Sillyfybtn.addEventListener('click', () => {
     mylinksDiv.style.display='none'
     myLinksbtn.classList.remove('active')
+    myProfilebtn.classList.remove('active')
+    myprofileDiv.style.display='none'
     Sillyfybtn.classList.add('active')
     homeDiv.style.display='block'
 });
@@ -17,13 +22,25 @@ Sillyfybtn.addEventListener('click', () => {
 myLinksbtn.addEventListener('click', () => {
     homeDiv.style.display='none'
     Sillyfybtn.classList.remove('active')
+    myProfilebtn.classList.remove('active')
+    myprofileDiv.style.display='none'
     myLinksbtn.classList.add('active')
     mylinksDiv.style.display='block'
+});
+
+myProfilebtn.addEventListener('click', () => {
+    homeDiv.style.display='none'
+    mylinksDiv.style.display='none'
+    myLinksbtn.classList.remove('active')
+    Sillyfybtn.classList.remove('active')
+    myProfilebtn.classList.add('active')
+    myProfilebtn.style.display='block'
 });
 
 LogOutbtn.addEventListener('click', () => {
     Sillyfybtn.classList.remove('active')
     myLinksbtn.classList.remove('active')
+    myProfilebtn.classList.remove('active')
     LogOutbtn.classList.add('active')
     logout()
 });

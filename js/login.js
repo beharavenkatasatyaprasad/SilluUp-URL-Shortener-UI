@@ -32,6 +32,7 @@ async function CheckCredentials(email, password) {
     if (res.type_ == 'success') {
         loginbtn.innerHTML = 'login successful'
         window.localStorage.setItem("user", res.user);
+        window.localStorage.setItem("username", res.name);
         setTimeout(() => {
             window.location.href = 'user/home.html';
         }, 1000);

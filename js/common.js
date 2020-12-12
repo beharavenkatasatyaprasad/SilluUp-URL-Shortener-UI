@@ -1,14 +1,41 @@
-document.getElementById('Login').addEventListener('click', () => {
-    window.location.href = "../index.html";
+const loginDiv = document.getElementById('loginDiv')
+const signupDiv = document.getElementById('signupDiv')
+const AdminDiv = document.getElementById('AdminDiv')
+const Adminbtn = document.getElementById('admin')
+const Loginbtn = document.getElementById('Login')
+const SignUpbtn = document.getElementById('SignUp')
+signupDiv.style.display='none'
+AdminDiv.style.display='none'
+
+
+
+Loginbtn.addEventListener('click', () => {
+    signupDiv.style.display='none'
+    AdminDiv.style.display='none'
+    SignUpbtn.classList.remove('active')
+    Adminbtn.classList.remove('active')
+    Loginbtn.classList.add('active')
+    loginDiv.style.display='block'
 });
 
-document.getElementById('SignUp').addEventListener('click', () => {
-    window.location.href = "../SignUp.html";
+SignUpbtn.addEventListener('click', () => {
+    loginDiv.style.display='none'
+    AdminDiv.style.display='none'
+    Loginbtn.classList.remove('active')
+    Adminbtn.classList.remove('active')
+    SignUpbtn.classList.add('active')
+    signupDiv.style.display='block'
 });
 
-document.getElementById('admin').addEventListener('click', () => {
-    window.location.href = "../admin.html";
+Adminbtn.addEventListener('click', () => {
+    loginDiv.style.display='none'
+    signupDiv.style.display='none'
+    Loginbtn.classList.remove('active')
+    SignUpbtn.classList.remove('active')
+    Adminbtn.classList.add('active')
+    AdminDiv.style.display='block'
 });
+
 
 if(!navigator.cookieEnabled){
     let newAlert = $("#message");

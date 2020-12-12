@@ -2,11 +2,13 @@ let form = document.getElementById('signup-Form');
 const btn = document.getElementById('signupbtn')
 
 function signup() {
-    const email = document.getElementById('email').value
-    const password = document.getElementById('password').value
+    const email = document.getElementById('email_').value
+    const password = document.getElementById('password_').value
     const confirmpassword = document.getElementById('confirmpassword').value
+    const FirstName = document.getElementById('FirstName').value
+    const LastName = document.getElementById('LastName').value
 
-    if (!email || !password || !confirmpassword) {
+    if (!email || !password || !confirmpassword || !FirstName || !LastName) {
         custom_alert('warning', 'Please fill all the fields...')
         btn.innerHTML = 'Fill All the fields...'
         setTimeout(() => {
@@ -20,16 +22,18 @@ function signup() {
                 btn.innerHTML = 'Sign Up'
             }, 3500);
         } else {
-            register(email, password)
+            register(email, password, FirstName, LastName)
         }
     }
 }
 
-async function register(email, password) {
+async function register(email, password, FirstName, LastName) {
     btn.innerHTML = 'Loading...'
     let data = {
         email: email,
-        password: password
+        password: password,
+        fname: FirstName,
+        lname: LastName
     }
     let response = await fetch('https://sillyfy.herokuapp.com/register', {
         method: 'POST',

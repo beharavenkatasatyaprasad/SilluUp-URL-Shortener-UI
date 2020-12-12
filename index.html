@@ -45,7 +45,7 @@
         </div>
     </nav>
     <hr style="height:1px; border-width:0; color:gray; background-color:gray; padding: 0px; margin: 0px;">
-    <div class="container-fluid login">
+    <div id="loginDiv" class="container-fluid fade-in login">
         <section class="login-input-div input-div">
             <h1 class="text-center cred-heading">Login</h1>
             <div class="card login-card col-lg-4 p-3 col-sm-10" style="margin: auto;">
@@ -87,11 +87,87 @@
                 </div>
             </div>
         </section>
-        <div id="particles-js" height="100"></div>
     </div>
+    <div id="signupDiv" class="container-fluid fade-in p-0 m-0 signup">
+        <section class="signup-input-div  input-div">
+            <h1 class="text-center cred-heading">SignUp</h1>
+            <div class="col-sm-10 col-md-10 col-lg-4" style="margin: auto;">
+                <div class="card signup-card p-3">
+                    <div class="form-inputs">
+                        <form id="signup-Form" autocomplete="off">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-6 form-group">
+                                    <label for="FirstName">First Name</label>
+                                    <input type="text" class="form-control" id="FirstName"required>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-6 form-group">
+                                    <label for="LastName">Last Name</label>
+                                    <input type="text" class="form-control" id="LastName"required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email_">Email address</label>
+                                <input type="email" class="form-control" id="email_" aria-describedby="email" required>
+                                <small id="emailHelp" class="form-text text-muted text-right">
+                                    (Activation link will be sent to this email)
+                                </small>
+                            </div>
+                            <div class="form-group">
+                                <label for="password_">Password</label>
+                                <input type="password" class="form-control" id="password_" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmpassword">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmpassword" required>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" id="signupbtn" onclick="signup()" class="btn btn-block">Sign
+                                    Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row text-center" style="color: rgb(255, 255, 255);">
+                    <div class="col">
+                        <p>
+                            <small>
+                                Forgot your Password?<br>
+                                <a href="Auth/resetpassword.html">Reset Password</a>
+                            </small>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>
+                            <small>
+                                Already had an Account?<br>
+                                <a href="./index.html">Login</a>
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="AdminDiv" class="container-fluid fade-in login">
+        <section class="login-input-div input-div">
+            <h1 class="text-center cred-heading">Admin Login</h1>
+            <div class="card login-card col-lg-4 p-3 col-sm-10" style="margin: auto;">
+                <div class="form-inputs">
+                    <form id="AdminLogin-Form" autocomplete="off">
+                        <div class="form-group">
+                            <button type="button" id="sendotp" class="btn btn-block">Send OTP</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="particles-js" height='100'></div>
     <script type="text/javascript" src="js/alert.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/signup.js"></script>
+    <script type="text/javascript" src="js/adminlogin.js"></script>
     <script src="js/particlejs/particles.min.js"></script>
     <script type="text/javascript" src="js/particlejs/particles.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
