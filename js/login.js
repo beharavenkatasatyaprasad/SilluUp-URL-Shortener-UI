@@ -1,6 +1,6 @@
 const loginbtn = document.getElementById('loginbtn');
 
-function login() {
+loginbtn.addEventListener('click',()=>{
     loginbtn.innerHTML = "loading..."
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -8,12 +8,12 @@ function login() {
         custom_alert('warning', 'Please Fill all the Fields...')
         loginbtn.innerHTML = 'Try again'
     } else {
-        CheckCredentials(email, password)
+        Check(email, password)
     }
-}
+})
 
 
-async function CheckCredentials(email, password) {
+async function Check(email, password) {
     let data = {
         email: email,
         password: password
@@ -28,7 +28,6 @@ async function CheckCredentials(email, password) {
     });
     let res = await response.json()
     custom_alert(res.type_, res.message);
-    console.log(res)
     if (res.type_ == 'success') {
         loginbtn.innerHTML = 'login successful'
         window.localStorage.setItem("user", res.user);
