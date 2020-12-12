@@ -6,7 +6,6 @@ sendotpBtn.addEventListener('click',async ()=>{
     sendotpBtn.innerHTML = 'sending...'
     let response = await fetch('https://sillyfy.herokuapp.com/admin_OTP_request', {
         method: 'GET',
-        body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json'
         }
@@ -38,13 +37,13 @@ function adminlogin() {
         custom_alert('warning', 'Please Fill all the Fields...')
         loginbtn.innerHTML = 'Try again'
     } else {
-        CheckCredentials(email, password)
+        CheckCredentials(password)
     }
 }
 
 
 
-async function CheckCredentials(email, password) {
+async function CheckCredentials(password) {
     let data = {
         password: password
     }
