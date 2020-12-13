@@ -1,10 +1,9 @@
-const user = window.localStorage.getItem('user');
 const result_div = document.getElementById('result_');
 
 myLinks()
 async function myLinks() {
     let data = {
-        user: user
+        user: useremail
     }
     let response = await fetch('https://sillyfy.herokuapp.com/MyLinks', {
         method: 'POST',

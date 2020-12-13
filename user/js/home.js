@@ -1,4 +1,4 @@
-const user = window.localStorage.getItem('user');
+const useremail = window.localStorage.getItem('email');
 
 const result_div = document.getElementById('result__');
 const sendbtn = document.getElementById('sendbtn');
@@ -34,7 +34,7 @@ async function sillyFy(longLink) {
     sendbtn.innerHTML = 'Wait..'
     sendbtn.disabled = true
     let data = {
-        req_by: user,
+        req_by: useremail,
         longLink: longLink,
     }
     let response = await fetch('https://sillyfy.herokuapp.com/sillyFy', {
