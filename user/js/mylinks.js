@@ -13,10 +13,11 @@ async function myLinks() {
         }
     });
     let res = await response.json()
-    displayResult(res)
+    display(res)
 }
 
-function displayResult(data) {
+function display(data) {
+
     const dataArray = data.result
     result_div.innerHTML = ''
     dataArray.forEach(link => {
