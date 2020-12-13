@@ -28,16 +28,18 @@
     <nav class="navbar shadow navbar-expand-md m-0 px-2 py-1" style="background-color:#002553;">
         <a class="navbar-brand" href="../index.html"><img src="../imgs/logo2.png" height="40" alt=""></a>
         <div class="welcome">
-            <p class="m-2" style="color: White;">Welcome <span style="text-transform: capitalize;" id="username"></span></p>
+            <p class="m-2" style="color: White;">Welcome <span style="text-transform: capitalize;" id="username"></span>
+            </p>
         </div>
-        <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbar">
             <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav  text-center">
                 <li class="nav-item">
                     <button type="button" id="Sillyfy" class="active nav-buttons btn btn-md btn-block">
-                        SillyFy 
+                        SillyFy
                     </button>
                 </li>
                 <li class="nav-item">
@@ -65,9 +67,12 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                         <h1>SillyFy</h1>
                         <p>Get URLs Sillified</p>
-                        <div id="orig" class="url_area input-container input-group d-flex justify-content-center" style="margin: auto;">
-                            <input type="text" id="Longlink" class="form-control form-control-lg col-sm-12 col-lg-8" placeholder="Paste long url and SillyFy it">
-                            <button type="button" id="sendbtn" class="input-group-append search-btn btn-lg btn-primary" onclick="send()">SillyFy</button>
+                        <div id="orig" class="url_area input-container input-group d-flex justify-content-center"
+                            style="margin: auto;">
+                            <input type="text" id="Longlink" class="form-control form-control-lg col-sm-12 col-lg-8"
+                                placeholder="Paste long url and SillyFy it">
+                            <button type="button" id="sendbtn" class="input-group-append search-btn btn-lg btn-primary"
+                                onclick="send()">SillyFy</button>
                         </div>
                     </div>
                 </div>
@@ -76,7 +81,8 @@
         <div id="result__" class="container-fluid p-0 m-0"></div>
     </div>
     <div id="mylinksDiv" class="container-fluid p-0">
-        <div id="result_" class="result col-lg-10 col-sm-12 row justify-content-around" style="margin: auto; margin-top: 2%;"></div>
+        <div id="result_" class="result col-lg-10 col-sm-12 row justify-content-around"
+            style="margin: auto; margin-top: 2%;"></div>
     </div>
     <div id="myprofileDiv" class="container-fluid p-0">
 
@@ -87,6 +93,21 @@
     <script type="text/javascript" src="./js/mylinks.js"></script>
     <script type="text/javascript" src="../js/particlejs/particles.min.js"></script>
     <script src="../js/particlejs/particles.js"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5fd5b327a8a254155ab2ce46/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
