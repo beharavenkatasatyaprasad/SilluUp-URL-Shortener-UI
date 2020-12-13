@@ -1,5 +1,5 @@
 document.getElementById('dashboard').addEventListener('click', () => {
-    window.location.href = "./home.html";
+    window.location.href = "./dashboard.html";
 });
 
 
@@ -24,8 +24,9 @@ async function checklogin() {
             window.location.href = "../admin.html"
         }, 800);
     }else{
-        const username = window.localStorage.getItem("user");
-        document.getElementById('username').innerHTML = username.split('@')[0]
+        const user = window.localStorage.getItem("email");
+        const username = window.localStorage.getItem("username");
+        document.getElementById('username').innerHTML = username
     }
 }
 
