@@ -8,7 +8,6 @@ document.getElementById('LogOut').addEventListener('click', () => {
 });
 
 checklogin();
-
 async function checklogin() {
     let response = await fetch('https://sillyfy.herokuapp.com/checklogin', {
         method: 'GET',
@@ -21,7 +20,7 @@ async function checklogin() {
     if (res.type_ != 'success') {
         custom_alert('danger' , 'Unauthorized Login..');
         setTimeout(() => {
-            window.location.href = "../admin.html"
+            window.location.href = "../index.html"
         }, 800);
     }else{
         const user = window.localStorage.getItem("email");
@@ -42,7 +41,7 @@ async function logout() {
     custom_alert(res.type_,res.message);
     setTimeout(() => {
         window.localStorage.removeItem("user");
-        window.location.href = "../admin.html"
+        window.location.href = "../index.html"
     }, 3000);
 }
 
