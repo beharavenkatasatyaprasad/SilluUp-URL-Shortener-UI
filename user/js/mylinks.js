@@ -17,7 +17,7 @@ async function myLinks() {
 }
 
 function displayResult(data) {
-    let dataArray = data.result
+    const dataArray = data.result
     result_div.innerHTML = ''
     dataArray.forEach(link => {
         const card = document.createElement('div');
