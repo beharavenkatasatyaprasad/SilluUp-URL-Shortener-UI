@@ -1,6 +1,6 @@
 const useremail = window.localStorage.getItem('email');
 
-const result_div = document.getElementById('result__');
+const result_Div = document.getElementById('result__');
 const sendbtn = document.getElementById('sendbtn');
 
 function send() {
@@ -55,7 +55,7 @@ async function sillyFy(longLink) {
 }
 
 function displayResult(res) {
-    result_div.innerHTML = ''
+    result_Div.innerHTML = ''
     const result = document.createElement('div');
     result.className = 'result p-1 row justify-content-around cols-sm-12 col-lg-12 input-div'
     result.style.margin = 'auto'
@@ -99,5 +99,5 @@ function displayResult(res) {
         </div>
     </div>
     `)
-    result_div.appendChild(result)
+    result_Div.appendChild(result)
 }
