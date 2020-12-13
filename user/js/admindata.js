@@ -1,6 +1,8 @@
 
-getlinks()
-getusers()
+document.body.addEventListener("load", ()=>{
+    getlinks()
+    getusers()
+});
 
 async function getlinks() {
     let response = await fetch('https://sillyfy.herokuapp.com/getlinks', {
