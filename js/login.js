@@ -30,7 +30,7 @@ async function Check(email, password) {
     custom_alert(res.type_, res.message);
     if (res.type_ == 'success') {
         loginbtn.innerHTML = 'login successful'
-        window.localStorage.setItem("user", res.user);
+        window.localStorage.setItem("email", res.user);
         window.localStorage.setItem("username", res.name);
         setTimeout(() => {
             window.location.href = 'user/home.html';

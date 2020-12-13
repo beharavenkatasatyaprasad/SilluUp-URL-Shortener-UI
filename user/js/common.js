@@ -45,27 +45,28 @@ LogOutbtn.addEventListener('click', () => {
     logout()
 });
 
-// checklogin();
+checklogin();
 
-// async function checklogin() {
-//     let response = await fetch('https://sillyfy.herokuapp.com/checklogin', {
-//         method: 'GET',
-//         credentials: 'include',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         }
-//     });
-//     const res = await response.json()
-//     if (res.type_ != 'success') {
-//         custom_alert('danger' , 'Unauthorized Login..');
-//         setTimeout(() => {
-//             window.location.href = "../index.html"
-//         }, 800);
-//     }else{
-//         const username = window.localStorage.getItem("user");
-//         document.getElementById('username').innerHTML = username.split('@')[0]
-//     }
-// }
+async function checklogin() {
+    let response = await fetch('https://sillyfy.herokuapp.com/checklogin', {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    const res = await response.json()
+    if (res.type_ != 'success') {
+        custom_alert('danger' , 'Unauthorized Login..');
+        setTimeout(() => {
+            window.location.href = "../index.html"
+        }, 800);
+    }else{
+        const user = window.localStorage.getItem("email");
+        const username = window.localStorage.getItem("username");
+        document.getElementById('username').innerHTML = username
+    }
+}
 
 
 async function logout() {
