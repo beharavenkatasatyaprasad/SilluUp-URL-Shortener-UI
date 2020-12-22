@@ -1,39 +1,18 @@
-const loginDiv = document.getElementById('loginDiv')
-const signupDiv = document.getElementById('signupDiv')
-const AdminDiv = document.getElementById('AdminDiv')
 const Adminbtn = document.getElementById('admin')
 const Loginbtn = document.getElementById('Login')
 const SignUpbtn = document.getElementById('SignUp')
-signupDiv.style.display='none'
-AdminDiv.style.display='none'
-
 
 
 Loginbtn.addEventListener('click', () => {
-    signupDiv.style.display='none'
-    AdminDiv.style.display='none'
-    SignUpbtn.classList.remove('active')
-    Adminbtn.classList.remove('active')
-    Loginbtn.classList.add('active')
-    loginDiv.style.display='block'
+    window.location.href = 'index.html'
 });
 
 SignUpbtn.addEventListener('click', () => {
-    loginDiv.style.display='none'
-    AdminDiv.style.display='none'
-    Loginbtn.classList.remove('active')
-    Adminbtn.classList.remove('active')
-    SignUpbtn.classList.add('active')
-    signupDiv.style.display='block'
+    window.location.href = 'signup.html'
 });
 
 Adminbtn.addEventListener('click', () => {
-    loginDiv.style.display='none'
-    signupDiv.style.display='none'
-    Loginbtn.classList.remove('active')
-    SignUpbtn.classList.remove('active')
-    Adminbtn.classList.add('active')
-    AdminDiv.style.display='block'
+    window.location.href = 'admin.html'
 });
 
 

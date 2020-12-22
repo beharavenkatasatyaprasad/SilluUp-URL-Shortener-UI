@@ -19,7 +19,7 @@
     <!-- font-awesome  -->
     <script src="https://use.fontawesome.com/d8a40b24d8.js"></script>
     <!-- font-awesome  -->
-    <title>SillyFy | Login</title>
+    <title>SillyFy | Admin Login</title>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav text-center">
                 <li class="nav-item">
-                    <button type="button" id="Login" class="active nav-buttons btn btn-md btn-block">
+                    <button type="button" id="Login" class="nav-buttons btn btn-md btn-block">
                         Login
                     </button>
                 </li>
@@ -43,7 +43,7 @@
                     </button>
                 </li>
                 <li class="nav-item">
-                    <button type="button" id="admin" class="nav-buttons btn btn-md btn-block">
+                    <button type="button" id="admin" class="active nav-buttons btn btn-md btn-block">
                         Admin
                     </button>
                 </li>
@@ -58,45 +58,16 @@
         padding: 0px;
         margin: 0px;
       " />
-    <div id="loginDiv" class="container-fluid fade-in login">
+    <div id="AdminDiv" class="container-fluid fade-in login">
         <section class="login-input-div input-div">
-            <h1 class="text-center cred-heading">Login</h1>
+            <h1 class="text-center cred-heading">Admin Login</h1>
             <div class="card login-card col-lg-4 p-3 col-sm-10" style="margin: auto">
                 <div class="form-inputs">
-                    <form id="Login-Form" autocomplete="off">
-                        <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="email" required />
-                            <small id="emailHelp" class="form-text text-muted text-right">
-                                (Email registered with SillyFy)
-                            </small>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" required />
-                        </div>
-                        <div class="form-group">
-                            <button type="button" id="loginbtn" class="btn btn-block">
-                                Login
+                    <form id="AdminLogin-Form" autocomplete="off">
+                        <div class="form-group mb-0">
+                            <button type="button" id="sendotp" class="btn btn-block">
+                                Send OTP
                             </button>
-                        </div>
-                        <div class="row text-center m-0">
-                            <div class="col">
-                                <p>
-                                    <small>
-                                        Don't have an account?<br />
-                                        <a href="index.html">SignUp</a>
-                                    </small>
-                                </p>
-                            </div>
-                            <div class="col">
-                                <p>
-                                    <small>
-                                        Forgot your Password?<br />
-                                        <a href="Auth/resetpassword.html">Reset Password</a>
-                                    </small>
-                                </p>
-                            </div>
                         </div>
                     </form>
                 </div>
@@ -107,7 +78,7 @@
     <div id="tawk_5fd5b327a8a254155ab2ce46"></div>
     <script type="text/javascript" src="js/alert.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/adminlogin.js"></script>
     <script src="js/particlejs/particles.min.js"></script>
     <script type="text/javascript" src="js/particlejs/particles.js"></script>
     <script type="text/javascript" src="js/tawk.js"></script>

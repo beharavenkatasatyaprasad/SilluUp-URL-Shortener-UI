@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans');
-
 .fade-in,
 body {
     animation: fadeInAnimation ease 2.2s;
@@ -182,6 +180,18 @@ body {
     border: 0.5px solid #053f8a;
     transition: all 0.1s ease-out;
 }
+
+#signup-Form .form-group{
+    margin-bottom: 1.5px;
+} 
+
+#signup-Form label{
+    margin-bottom: 1.5px;
+} 
+
+#signup-Form input:last-child{
+    margin-bottom: 0.5rem;
+} 
 
 .form-group input:hover,
 .form-group input:focus {

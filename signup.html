@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="fa-events-icons-ready" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- jquery  -->
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <!-- bootstrap  -->
+    <!-- google font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans" rel="stylesheet">
+    <!-- google font  -->
+    <!-- css  -->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- css  -->
+    <!-- font-awesome  -->
+    <script src="https://use.fontawesome.com/d8a40b24d8.js"></script>
+    <!-- font-awesome  -->
+    <title>SillyFy | SignUp</title>
+</head>
+
+<body>
+    <div id="message"></div>
+    <nav class="navbar shadow navbar-expand-md m-0 px-2 py-1" style="background-color:#002553;">
+        <a class="navbar-brand" href="index.html"><img src="imgs/logo2.png" height="40" alt=""></a>
+        <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#collapsibleNavbar">
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav  text-center">
+                <li class="nav-item">
+                    <button type="button" id="Login" class="nav-buttons btn btn-md btn-block">Login</button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" id="SignUp" class="active nav-buttons btn btn-md btn-block">SignUp</button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" id="admin" class="nav-buttons btn btn-md btn-block">Admin</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <hr style="height:1px; border-width:0; color:gray; background-color:gray; padding: 0px; margin: 0px;">
+    <div id="signupDiv" class="container-fluid fade-in p-0 m-0 signup">
+        <section class="signup-input-div  input-div">
+            <h1 class="text-center mt-2 cred-heading">SignUp</h1>
+            <div class="col-sm-10 col-md-10 col-lg-4" style="margin: auto;">
+                <div class="card signup-card p-3">
+                    <div class="form-inputs">
+                        <form id="signup-Form" autocomplete="off">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-6 form-group">
+                                    <label for="FirstName">First Name</label>
+                                    <input type="text" class="form-control" id="FirstName" required>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-6 form-group">
+                                    <label for="LastName">Last Name</label>
+                                    <input type="text" class="form-control" id="LastName" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email_">Email address</label>
+                                <input type="email" class="form-control" id="email_" aria-describedby="email" required>
+                                <small id="emailHelp" class="form-text text-muted text-right">
+                                    (Activation link will be sent to this email)
+                                </small>
+                            </div>
+                            <div class="form-group">
+                                <label for="password_">Password</label>
+                                <input type="password" class="form-control" id="password_" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmpassword">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmpassword" required>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" id="signupbtn" onclick="signup()" class="btn btn-block">Sign
+                                    Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row text-center" style="color: rgb(255, 255, 255);">
+                    <div class="col">
+                        <p>
+                            <small>
+                                Already had an account?<br>
+                                <a href="index.html">Login</a>
+                            </small>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>
+                            <small>
+                                Forgot your Password?<br>
+                                <a href="Auth/resetpassword.html">Reset Password</a>
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="particles-js" height='100'></div>
+    <div id='tawk_5fd5b327a8a254155ab2ce46'></div>
+    <script type="text/javascript" src="js/alert.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/signup.js"></script>
+    <script src="js/particlejs/particles.min.js"></script>
+    <script type="text/javascript" src="js/particlejs/particles.js"></script>
+    <script type="text/javascript" src="js/tawk.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

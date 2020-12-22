@@ -1,6 +1,7 @@
 const form = document.getElementById('reset-form');
 const resetbtn = document.getElementById('resetbtn');
 
+
 function resetPassword() {
     const email = document.getElementById('email').value;
     resetbtn.innerHTML = 'Loading...'
